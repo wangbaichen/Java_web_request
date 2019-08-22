@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下载页面</title>
+</head>
+<body>
+    <!--//使用“绝对路径”直接指向图片资源，无法下载-->
+    <!--//因为图片被浏览器解析了-->
+    <a href="img/1.jpg" >图片</a>
+    <!--//浏览器不能解析视频，所以直接下载-->
+    <a href="img/1.flv" >视频</a>
+
+
+
+    <a href="/downLoadServlet?filename=1.jpg" >图片</a>
+<!--指向servlet。并传递资源的参数-->
+    <a href="/downLoadServlet?filename=1.flv" >视频</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+
+</head>
+<body>
+    <img id="checkcode" src="/CheckCodeServlet">
+
+    <a id="change" href="">看不清楚，换一张</a>
+</body>
+</html>
+
+<script>
+    var img = document.getElementById("checkcode");
+
+    img.onclick = function () {
+        //加时间戳，用不重复
+        var date = new Date();
+        date.getTime();
+        img.src = "/CheckCodeServlet?"+date;
+    }
+</script>
